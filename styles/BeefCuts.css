@@ -3,13 +3,12 @@
 
 #container
 {
-  width: 800px;
-  height:600px;
+  width: 100%;
+  height: 100%;
 }
 
-h1 {
+body
+{
+  height: 100%;
   margin: 0;
-  padding: 20px 0;    
-  color: #00539F;
-  text-shadow: 3px 3px 1px black;
 }
