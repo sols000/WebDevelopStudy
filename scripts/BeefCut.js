@@ -7,10 +7,9 @@ var myChart = echarts.init(dom, null, {
 });
 
 var app = {};
-var ROOT_PATH = '../echarts-website-pwa/examples';
 var option;
 
-$.get(ROOT_PATH + '/data/asset/geo/Beef_cuts_France.svg', function (svg) {
+$.get('geo/Beef_cuts_France.svg', function (svg) {
   echarts.registerMap('Beef_cuts_France', { svg: svg });
   option = {
     tooltip: {},
