@@ -1,15 +1,16 @@
 
 var dom = document.getElementById('main');
 var myChart = echarts.init(dom, null, {
-  renderer: 'canvas',
+  renderer: 'svg',
   useDirtyRect: true
 });
 var app = {};
-var ROOT_PATH = 'https://fastly.jsdelivr.net/gh/apache/echarts-website@asf-site/examples';
+var ROOT_PATH = 'https://fastly.jsdelivr.net/gh/apache/echarts-website@asf-site/examples/data/asset';
+//var ROOT_PATH = 'https://github.com/sols000/WebDevelopStudy/tree/master';
 var option;
 
-$.get(ROOT_PATH + '/data/asset/geo/Beef_cuts_France.svg', function (svg) {
-echarts.registerMap('Beef_cuts_France', { svg: svg });
+$.get(ROOT_PATH + '/geo/Beef_cuts_France.svg', function (svgData) {
+echarts.registerMap('Beef_cuts_France', { svg: svgData });
 option = {
 tooltip: {},
 visualMap: {
