@@ -6,7 +6,7 @@ var chartDom = document.getElementById('main');
 var myChart = echarts.init(chartDom);
 
 myChart.showLoading();
-$.get(ROOT_PATH + '/bound/500000_full.json', function (geoJson) {
+$.get(ROOT_PATH + '/bound/100000_full.json', function (geoJson) {
   myChart.hideLoading();
   echarts.registerMap('CHONGQING', geoJson);
   myChart.setOption(
@@ -90,10 +90,10 @@ $.get(ROOT_PATH + '/bound/500000_full.json', function (geoJson) {
           ],
           // 自定义名称映射
           nameMap: {
-            '万州区'    : 'WanZhou',
-            '涪陵区'    : 'FuLing',
-            '渝中区'    : 'YZ',
-            '大渡口区'  : 'Du',
+            '北京市'    : 'WanZhou',
+            '天津市'    : 'FuLing',
+            '河北省'    : 'YZ',
+            '山西省'    : 'Du',
             '江北区'    : 'JB',
             '沙坪坝区'  : 'Sha',
             '九龙坡区'  : 'Jiu',
